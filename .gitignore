@@ -1,0 +1,7 @@
+# Ignore le répertoire node-modules
+/node_modules
+
+# Ignore le répertoire Ressources
+/ressources
+
+
