@@ -3,3 +3,9 @@ layout: layout.njk
 ---
 
 <h1>Ma page de contact</h1>
+
+<form name="contact" method="POST" data-netlify="true">
+    <label for="mysubject">Sujet</label>
+    <input type="text" name="subject" id="mysubject" >
+    <button type="submit">Envoyer</button>
+</form>
