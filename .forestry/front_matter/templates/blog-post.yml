@@ -1,0 +1,21 @@
+---
+label: Blog post
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: title
+- name: publication_date
+  type: datetime
+  label: publication date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+pages:
+- posts/le-numero-2.md
+- posts/mon-article-numero-1.md
