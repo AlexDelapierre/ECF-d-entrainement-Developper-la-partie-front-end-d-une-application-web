@@ -17,4 +17,5 @@ fields:
     time_format: 
     display_utc: false
 pages:
+- posts/le-numero-2.md
 - posts/mon-article-numero-1.md
