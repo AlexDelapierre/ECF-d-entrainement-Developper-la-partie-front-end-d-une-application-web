@@ -1,0 +1,128 @@
+
+/* Display burger-menu */
+#burger-menu {
+  display: none;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Montserrat, sans-serif;
+}
+
+#desktop-menu {
+  width: 100%;
+  font-size: 18px;
+  /* colle le menu en haut de l'écran */
+  position: sticky;
+  top: 0;
+  /* pour que le sous-menu du footer soit par dessus l'image background */
+  z-index: 1;
+}
+
+#desktop-menu > ul {
+  display: flex;
+  text-align: center;
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+  height: 60px;
+  justify-content: space-around;
+}
+
+#desktop-menu ul {
+  list-style-type: none;
+}
+
+#desktop-menu > ul > li {
+  /* raccourci de la propriété flex-grow */
+  /* pour que la largeur s’adapte équitablement entre chaque élément li */
+  flex: 1;
+}
+
+#desktop-menu > ul > li > a {
+  position: absolute;
+  top: 30%;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu-deroulant > a:after {
+  content: "❯";
+  font-size: 15px;
+  margin-left: 7px;
+  /* permet d'appliquer une animation sur le chevron  */
+  display: inline-block;
+}
+
+/* ----------------------------------sous-menu------------------------------------ */
+
+.sous-menu {
+  /* pour que le sous-menu se met en dessous  */
+  margin-top: 60px;
+  width: 100%;
+  text-align: left;
+  background-color: white;
+  border-radius: 2px;
+  /* permettra de cacher tout élément qui dépasse hors du sous-menu */
+  overflow: hidden;
+  /* Les éléments seront masqués */
+  max-height: 0;
+}
+
+.sous-menu > li > a {
+  height: 50px;
+  padding-left: 20px;
+  /* pour que toute la ligne soit cliquable */
+  width: 100%;
+  align-items: center;
+  display: flex;
+}
+
+#desktop-menu > ul > li:hover > a {
+  color: #2169ec;
+}
+
+.sous-menu > li:hover {
+  background-color: rgba(33, 105, 236, 0.3);
+}
+
+.sous-menu > li:hover > a {
+  color: white;
+}
+
+/*Création de l'annimation qui tourne la flèche */
+@keyframes rotationFleche {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+/* Application de l'annimation qui tourne la flèche */
+.menu-deroulant:hover > a:after {
+  animation: rotationFleche 0.2s linear forwards;
+}
+
+@keyframes apparitionSousMenu {
+  0% {
+    box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0);
+    /* augmente la taille maximale du sous-menu pour que les éléments ne soient plus caché par overflow: hidden */
+    border-top: 3px solid #2169ec;
+  }
+  30% {
+    box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    max-height: 50em;
+    border-top: 3px solid #2169ec;
+    box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.menu-deroulant:hover > .sous-menu {
+  animation: apparitionSousMenu 1s forwards;
+}

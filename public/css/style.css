@@ -1,8 +1,7 @@
 
-
 * {
   box-sizing: border-box;
-  }
+}
   
 body, html {
   height: 100%;
@@ -14,25 +13,17 @@ body, html {
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, 
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  /* To set the position absolute to footer */
+  position: relative;
+  /* height: 1000px; */
 }
   
-.navbar-toggler-icon {
-  width: 40px;
-  height: 40px;
-}
-
-.nav-link {
-  font-size: 1.5em;
-  color: black;
-}
-
 main {
   position: relative;
   display: flex; 
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* width: 100%; */
   height: 80vh;
   background-image: url('../img/baby.jpg');
   background-repeat: no-repeat;
@@ -51,27 +42,27 @@ h1 {
   border: 1px solid black;
 }
 
-
-
+/*
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+*/
 
 @media screen and (min-width: 700px) {
   main {
-    height: 92vh;
+    height: 80vh;
   }
  
-.nav-link {
-    /* font-size: 1em; */
-  }
-
   h1 {
     font-size: 3em;
   }
 
- #logo {
+  #logo {
     position: absolute;
     bottom: 5%;
     left: unset;
-    /* margin: auto; */
     border: 1px solid black;
   }
 }
@@ -80,20 +71,5 @@ h1 {
 
 
 @media screen and (min-width: 992px) {
-  nav {
-    /* background-color: #524E4E; */
-  }
-
-  .navbar-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-left: 3%;   
-  }
-
-  .nav-link {
-    font-size: 2em;
-    margin-right: 50px;
-    /* color: white; */
-  }
+  
 }

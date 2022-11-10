@@ -4,6 +4,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/img");
     eleventyConfig.addPassthroughCopy("./src/svg");
     eleventyConfig.addPassthroughCopy("./src/css");
+    eleventyConfig.addPassthroughCopy("./src/js");
 
     // Pour générer le dossier public à partir du dossier src
     return  {
